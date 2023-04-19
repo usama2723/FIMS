@@ -4,9 +4,6 @@ import React, { useState, useEffect } from 'react'
 import { sendPasswordResetEmail } from "firebase/auth";
 import { auth } from '../firebase/firebase.config';
 
-
-
-
 const ForgotPassword = (props) => {
     const { navigation } = props;
 
@@ -50,7 +47,7 @@ const ForgotPassword = (props) => {
                         color: 'grey',
                         marginLeft: 20,
                         marginRight: 20,
-                        marginTop: '3%',
+                        marginTop: 10,
                     }}>
                         Enter the email assosiated with your account and we'll send an email with instructions to reset your password
                     </Text>
@@ -77,7 +74,7 @@ const ForgotPassword = (props) => {
                     borderRadius: 5,
                     height: 40,
                     width: 320,
-                    marginTop: 6,
+                    marginTop:10,
                 }} mode="contained" onPress={() => resetPassword()} >
 
                     SEND

@@ -16,13 +16,13 @@ const LoginScreen = (props) => {
         setLoading(true)
         setErrors(null)
 
+    
         signInWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                navigation.replace('Home')
+
+                 navigation.replace('TabNavigation')
                 alert('User login successfully');
                 const user = userCredential.user;
-
-                // ...
             })
             .catch((error) => {
                 if (error.code === 'auth/invalid-email') {

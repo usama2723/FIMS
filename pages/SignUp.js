@@ -14,11 +14,11 @@ const SignUp = (props) => {
     const [confirmPassword, setConfirmPassword] = useState()
     const [errors, setErrors] = useState()
     const [loading, setLoading] = useState(false)
-    const [visible, setVisible] = React.useState(false);
+    // const [visible, setVisible] = React.useState(false);
 
-    const onToggleSnackBar = () => setVisible(!visible);
+    // const onToggleSnackBar = () => setVisible(!visible);
 
-    const onDismissSnackBar = () => setVisible(false);
+    // const onDismissSnackBar = () => setVisible(false);
 
 
 
@@ -79,9 +79,6 @@ const SignUp = (props) => {
             })
 
     }
-
-
-
     return (
         <ScrollView>
             <View>
@@ -161,7 +158,7 @@ const SignUp = (props) => {
                 </View>
 
                 {errors && (
-                    <View style={{ display: 'flex', alignItems: 'center' }}>
+                    <View style={{ display: 'flex', alignItems: 'center', marginTop: 10, }}>
                         <View style={{ display: 'flex', marginTop: 5, paddingHorizontal: 10, borderRadius: 5, justifyContent: 'center', backgroundColor: '#cc0000', paddingVertical: 15, width: '80%' }}>
                             {errors?.email && <Text style={{ color: 'white' }}>{errors?.email}</Text>}
                             {errors?.password && <Text style={{ color: 'white' }}>{errors?.password}</Text>}
@@ -174,7 +171,7 @@ const SignUp = (props) => {
                     flexDirection: 'row',
                     marginHorizontal: 10,
                     justifyContent: 'space-evenly',
-                    marginTop: '15%',
+                    marginTop: 90,
                 }}>
                     <Button style={{
                         justifyContent: 'center',
@@ -209,7 +206,7 @@ const SignUp = (props) => {
                     flexDirection: 'row',
                     justifyContent: 'center',
                     alignSelf: 'center',
-                    marginTop: 55,
+                    marginTop: 70,
                 }} >
                     <Text style={{
 
@@ -224,18 +221,18 @@ const SignUp = (props) => {
                         marginLeft: 6
                     }} mode="contained" onPress={() => navigation.navigate('Login')}>Log in</Text>
                 </View>
-                <Button onPress={onToggleSnackBar}>{visible ? 'Hide' : 'Show'}</Button>
+                {/* <Button onPress={onToggleSnackBar}>{visible ? 'Hide' : 'Show'}</Button>
                 <Snackbar
                     visible={visible}
                     onDismiss={onDismissSnackBar}
                     action={{
                         label: 'Undo',
                         onPress: () => {
-                            // Do something
+                           
                         },
                     }}>
                     Hey there! I'm a Snackbar.
-                </Snackbar>
+                </Snackbar> */}
             </View>
 
         </ScrollView>
